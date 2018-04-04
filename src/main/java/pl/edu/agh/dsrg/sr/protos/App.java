@@ -7,9 +7,10 @@ public class App {
     public static void main(String args[]) {
         DistributedMap distributedMap = new DistributedMap();
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("Enter channel name:");
+        String channelName = scanner.nextLine();
         try {
-            distributedMap.start("NiezlyKanal");
+            distributedMap.start(channelName);
         } catch (Exception e) {
             e.printStackTrace();
         }
